@@ -71,11 +71,12 @@ public class HomeController {
 		long categoryLongId = Long.parseLong(categoryId);
 		System.out.println(categoryLongId);
 		mv.addObject("productList", productService.findByCategory(categoryLongId));
-		mv.addObject("categoryList", categoryService.listCategory());
+		mv.addObject("categoryList", categoryService.listCategory());	
 		return mv;
+		
 	}
 	@GetMapping("ViewDetails/{productId}")
-	public ModelAndView addToCart(@PathVariable("productId")String productId,Principal principal) {
+	public ModelAndView ViewDetails(@PathVariable("productId")String productId,Principal principal) {
 		ModelAndView mv = new ModelAndView("ProductDetails");
 		long productLongId = Long.parseLong(productId);
 		Product product = productService.getProductById(productLongId).get();
