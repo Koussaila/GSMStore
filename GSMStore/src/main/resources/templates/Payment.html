@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles">
+
+<meta charset="UTF-8">
+</head>
+<title>Payment Info</title>
+<body>
+	<div class="container">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title mb-4">Information de paiement</h4>
+			<form role="form">
+				<div class="form-group">
+					<label for="username">Nom sur la carte</label> <input type="text"
+						class="form-control" name="username" placeholder="Ex. John Smith"
+						required="">
+				</div>
+				<!-- form-group.// -->
+
+				<div class="form-group">
+					<label for="cardNumber">Numéro de carte</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="cardNumber"
+							placeholder="">
+						<div class="input-group-append">
+							<span class="input-group-text"> <i class="fab fa-cc-visa"></i>
+								&nbsp; <i class="fab fa-cc-amex"></i> &nbsp; <i
+								class="fab fa-cc-mastercard"></i>
+							</span>
+						</div>
+					</div>
+					<!-- input-group.// -->
+				</div>
+				<!-- form-group.// -->
+				<div class="row">
+					<div class="col-md flex-grow-0">
+						<div class="form-group">
+							<label><span class="hidden-xs">Expiration</span> </label>
+							<div class="form-inline" style="min-width: 220px">
+								<select class="form-control" style="width: 100px">
+									<option>MM</option>
+									<option>01 - Janvier</option>
+									<option>02 - Février</option>
+									<option>03 - Mars</option>
+									<option>03 - Avril</option>
+									<option>03 - Mai</option>
+									<option>03 - Juin</option>
+									<option>03 - Juillet</option>
+									<option>03 - Aout</option>
+									<option>03 - Septembre</option>
+									<option>03 - Octobre</option>
+									<option>03 - Novembre</option>
+									<option>03 - Décembre</option>
+								</select> <span style="width: 20px; text-align: center"> / </span> <select
+									class="form-control" style="width: 100px">
+									<option>YY</option>
+									<option>2021</option>
+									<option>2022</option>
+									<option>2023</option>
+									<option>2024</option>								
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label data-toggle="tooltip" title=""
+								data-original-title="Code à 3 chiffres au dos de la carte">CVV
+								<i class="fa fa-question-circle"></i>
+							</label> <input class="form-control" required="" type="text">
+						</div>
+						<!-- form-group.// -->
+					</div>
+				</div>
+				<!-- row.// -->
+				<button class="subscribe btn btn-primary btn-block" type="button">
+					Confirmer</button>
+			</form>
+		</div>
+		<!-- card-body.// -->
+	</div>
+	<!-- card .// -->
+	</div>
+</body>
+</html>
