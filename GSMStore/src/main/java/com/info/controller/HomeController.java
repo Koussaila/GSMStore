@@ -1,5 +1,9 @@
 package com.info.controller;
 
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.info.model.Product;
 import com.info.model.User;
 import com.info.service.CategoryService;
 import com.info.service.ProductService;
@@ -69,7 +74,13 @@ public class HomeController {
 		mv.addObject("categoryList", categoryService.listCategory());
 		return mv;
 	}
-	
+	@GetMapping("ViewDetails/{productId}")
+	public ModelAndView addToCart(@PathVariable("productId")String productId,Principal principal) {
+		ModelAndView mv = new ModelAndView("ProductDetails");
+		long productLongId = Long.parseLong(productId);
+		Product product = productService.getProductById(productLongId).get();
+		return mv;
+	}
 	@GetMapping("error")
 	public String error() {
 		return "error";

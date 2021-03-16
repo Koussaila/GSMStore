@@ -21,9 +21,8 @@
 				<img th:src="${product.image}" class="card-img-top" alt="Product Image">
 					<div class="card-body">
 						<h5 th:text="${product.productName}" class="card-title"></h5>
-						<p th:text="${product.productDescription}" class="card-text"></p>
 						<p th:text="'$ '+${product.productPrice}" class="card-text"></p>
-						<a href="#" th:href="@{'~/profile/addToCart/' + ${product.productId}}" class="btn btn-primary">AddToCart</a>
+						<a href="#" th:href="@{'~/ViewDetails/' + ${product.productId}}" class="btn btn-primary">AddToCart</a>
 					</div>
 				</div>
 			</div>
