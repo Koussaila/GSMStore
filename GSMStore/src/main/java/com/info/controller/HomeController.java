@@ -80,6 +80,7 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("ProductDetails");
 		long productLongId = Long.parseLong(productId);
 		Product product = productService.getProductById(productLongId).get();
+		mv.addObject("product", product);
 		return mv;
 	}
 	@GetMapping("error")
