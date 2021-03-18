@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:insert="fragments.html :: headerfiles">
-
-<meta charset="UTF-8">
 </head>
-<title>Payment Info</title>
+<title>Payment</title>
 <body>
+	<header th:insert="fragments.html :: nav"></header>
 	<div class="container">
 	<div class="card">
-		<div class="card-body">
+		<div class="card-body" style=" position: absolute; background-color: #A7ADAE; margin-right: auto; margin-left: 300px; margin-top: 90px;">
 			<h4 class="card-title mb-4">Information de paiement</h4>
 			<form role="form">
 				<div class="form-group">
@@ -16,10 +16,8 @@
 						class="form-control" name="username" placeholder="Ex. John Smith"
 						required="">
 				</div>
-				<!-- form-group.// -->
-
 				<div class="form-group">
-					<label for="cardNumber">NumÃ©ro de carte</label>
+					<label for="cardNumber">Numéro de carte</label>
 					<div class="input-group">
 						<input type="text" class="form-control" name="cardNumber"
 							placeholder="">
@@ -29,10 +27,8 @@
 								class="fab fa-cc-mastercard"></i>
 							</span>
 						</div>
-					</div>
-					<!-- input-group.// -->
-				</div>
-				<!-- form-group.// -->
+					</div>					
+				</div>				
 				<div class="row">
 					<div class="col-md flex-grow-0">
 						<div class="form-group">
@@ -41,7 +37,7 @@
 								<select class="form-control" style="width: 100px">
 									<option>MM</option>
 									<option>01 - Janvier</option>
-									<option>02 - FÃ©vrier</option>
+									<option>02 - Février</option>
 									<option>03 - Mars</option>
 									<option>03 - Avril</option>
 									<option>03 - Mai</option>
@@ -51,7 +47,7 @@
 									<option>03 - Septembre</option>
 									<option>03 - Octobre</option>
 									<option>03 - Novembre</option>
-									<option>03 - DÃ©cembre</option>
+									<option>03 - Décembre</option>
 								</select> <span style="width: 20px; text-align: center"> / </span> <select
 									class="form-control" style="width: 100px">
 									<option>YY</option>
@@ -66,21 +62,19 @@
 					<div class="col-md-3">
 						<div class="form-group">
 							<label data-toggle="tooltip" title=""
-								data-original-title="Code Ã  3 chiffres au dos de la carte">CVV
+								data-original-title="Code à 3 chiffres au dos de la carte">CVV
 								<i class="fa fa-question-circle"></i>
 							</label> <input class="form-control" required="" type="text">
 						</div>
-						<!-- form-group.// -->
+						
 					</div>
 				</div>
-				<!-- row.// -->
+				
 				<button class="subscribe btn btn-primary btn-block" type="button">
 					Confirmer</button>
 			</form>
 		</div>
-		<!-- card-body.// -->
 	</div>
-	<!-- card .// -->
-	</div>
+</div>
 </body>
 </html>
