@@ -10,20 +10,20 @@
 	
 		<div class="list-group list-group-horizontal-md my-5">
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/category-form}">Manage Category</a>
+					href="#" th:href="@{/manager/category-form}">Gérer la catégorie</a>
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/product-form}">Manage Product</a>
+					href="#" th:href="@{/manager/product-form}">Gestion du produit</a>
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/admin/add-user}">Add Admin/Manager</a>
+					href="#" th:href="@{/admin/add-user}">Ajouter un administrateur/gestionnaire</a>
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/admin/user-list}">User/Manager/Admin List</a>
+					href="#" th:href="@{/admin/user-list}">Liste des utilisateurs/gestionnaires/administrateurs</a>
 					
 			</div>
 		<table class="table col-7">
 			<thead>
 				<tr>
 					<th scope="col">Id</th>
-					<th scope="col">Category Name</th>
+					<th scope="col">Catégorie</th>
 					<th scope="col">Action</th>
 				</tr>
 			</thead>
@@ -50,7 +50,7 @@
 					<form th:action="@{/manager/add-category}" method="post">
 						<fieldset>
 							<div class="form-group">
-								<label for="categoryName">Category Name</label> <input
+								<label for="categoryName">Catégorie</label> <input
 									type="text" class="form-control" id="categoryName"
 									name="categoryName" placeholder="Category Name">
 							</div>

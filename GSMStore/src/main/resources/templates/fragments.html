@@ -26,7 +26,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active"><a class="nav-link" href="#"
-							th:href="@{/index}">Home <span class="sr-only">(current)</span></a>
+							th:href="@{/index}">Acceuil <span class="sr-only">(current)</span></a>
 						</li>
 
 						<li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a
@@ -40,7 +40,7 @@
 							aria-expanded="false"> Categories </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#">Action</a> <a
-									class="dropdown-item" href="#">Another action</a>
+									class="dropdown-item" href="#">Autres actions</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">Something else here</a>
 							</div></li>
@@ -53,14 +53,14 @@
 					<form class="form-inline my-2 my-lg-0">
 						<input class="form-control mr-sm-2" type="search"
 							placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+						<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
 					</form>
 					<form class="form-inline my-2 my-lg-0" form-method="post"
 						th:action="@{/logout}">
 						<button sec:authorize="isAuthenticated()"
-							class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+							class="btn btn-outline-danger my-2 my-sm-0" type="submit">Se déconnecter</button>
 						<button sec:authorize="isAnonymous()" th:href="@{~/login}"
-							class="btn btn-outline-info my-2 my-sm-0" type="submit">Login</button>
+							class="btn btn-outline-info my-2 my-sm-0" type="submit">Se connecter</button>
 					</form>
 				</div>
 			</nav>
@@ -110,7 +110,7 @@
 
 			<!-- Copyright -->
 			<div class="text-center p-3" style="background-color: #5ba7a9">
-				2020 Copyright: <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+				2020 Copyright: <a class="text-dark" href="https://mdbootstrap.com/">GSM-Store.com</a>
 			</div>
 			<!-- Copyright -->
 		</footer>
