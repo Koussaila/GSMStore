@@ -83,6 +83,7 @@ public class HomeController {
 		mv.addObject("product", product);
 		return mv;
 	}
+	
 	@GetMapping("error")
 	public String error() {
 		return "error";

@@ -6,8 +6,8 @@
 <body>
 	<header th:insert="fragments.html :: nav"></header>
 	<div class="container">
-	<div class="row my-5">
-			<div class="list-group list-group-flush col-5">
+	
+			<div class="list-group list-group-horizontal-mds my-5">
 				<a class="list-group-item list-group-item-action" 
 					href="#" th:href="@{/manager/category-form}">Manage Category</a>
 				<a class="list-group-item list-group-item-action" 
@@ -38,13 +38,13 @@
 					<td th:text="${user.role}"></td>
 					<td>
 						<a href="#" th:href="@{'/admin/delete-User/'+ ${user.userId}}" 
-						class="btn btn-danger">Delete</a>
+						class="btn btn-info"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 		
 	</div>
-	</div>
+	<footer th:insert="fragments.html :: foot"></footer>
 </body>
 </html>

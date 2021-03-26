@@ -8,8 +8,7 @@
 	<div class="container">
 		<h1 class="display-4 my-2" th:text ="'Welcome ' + ${#authentication.getPrincipal().getFirstName()}"></h1>
 		<hr>
-		<div class="row">
-			<div class="list-group list-group-flush col-5">
+			<div class="list-group list-group-horizontal-md my-5">
 				<a class="list-group-item list-group-item-action" 
 					href="#" th:href="@{/manager/category-form}">Manage Category</a>
 				<a class="list-group-item list-group-item-action" 
@@ -21,6 +20,9 @@
 					
 			</div>
 		</div>
-	</div>
+	<br/><br/>
+	<footer th:insert="fragments.html :: foot"></footer>
+		
+	
 </body>
 </html>

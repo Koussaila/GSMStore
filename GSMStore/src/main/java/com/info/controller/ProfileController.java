@@ -68,5 +68,15 @@ public class ProfileController {
 		mv.addObject("user", user);
 		return mv;
 	}
+	@GetMapping("payment")
+	public ModelAndView payment(Principal principal) {
+		ModelAndView mv = new ModelAndView("profile/payment");
+		User user = userService.findByEmail(principal.getName());
+		mv.addObject("user", user);
+		int total = findSum(user);
+		mv.addObject("total", total);
+		return mv;
+	}
+	
 	
 }

@@ -6,9 +6,11 @@
 </head>
 <title>Payment Info</title>
 <body>
-	<div class="container">
-	<div class="card">
-		<div class="card-body">
+<header th:insert="fragments.html :: nav"></header>
+
+	<div class="container my-5">
+	<div class="card" style="max-width:500px; margin-left:300px;" >
+		<div class="card-body" style="  background-color: #A7ADAE; max-width:500px;">
 			<h4 class="card-title mb-4">Information de paiement</h4>
 			<form role="form">
 				<div class="form-group">
@@ -74,7 +76,7 @@
 					</div>
 				</div>
 				<!-- row.// -->
-				<button class="subscribe btn btn-primary btn-block" type="button">
+				<button class="subscribe btn btn-info btn-block" type="button">
 					Confirmer</button>
 			</form>
 		</div>
@@ -82,5 +84,6 @@
 	</div>
 	<!-- card .// -->
 	</div>
+<footer th:insert="fragments.html :: foot"></footer>
 </body>
 </html>

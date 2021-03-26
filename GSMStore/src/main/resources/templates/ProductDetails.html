@@ -9,50 +9,67 @@
 	<header th:insert="fragments.html :: nav"></header>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6" > 
-				 <img style="max-width: 100%;" th:src="${product.image}" alt="Product Image" /> 			 
+		
+			<!-- Affichage Image -->
+			
+			<div class="col-md-6">
+				<img style="height: 520px; width: 520px;" th:src="${product.image}"
+					alt="Product Image" />
 			</div>
-			<div class="col-md-6" style="border: 0px solid gray">
-			<h3 th:text="${product.productName}" ></h3>
-				
-				<h5 style="color: #337ab7">
-					Categorie : <a th:href="@{'/getProducts/' + ${category.categoryId}}" th:text="${product.category.categoryName}"></a><small style="color: #337ab7"></small>
-				</h5>
-				<div style="width: 100%; border-top: 1px solid silver">
-					<p th:text="${product.productDescription}" class="card-text"></p>
-					<h6 class="title-price">Prix</h6>
-					<h3 style="margin-top: 0px;" th:text="${product.productPrice}+'$'" class="card-text"></h3><br/>
-					<div class="section" style="padding-bottom: 20px;">
+			
+				<!-- Affichage Titre Produit -->
+			
+			    <div class="col-md-6" style="border: 0px solid gray">
+				<h3 th:text="${product.productName}"></h3>
+
+                <!-- Affichage Categorie --> 
+                
+				<h5 style="color: #337ab7">Categorie 
+				<a class="list-group-item mr-2" th:each="category : ${productList}"
+					th:text="${category.categoryName}" href="#"
+					th:href="@{'/getProducts/' + ${category.categoryId}}"></a></h5>
+					<p>Smartphone</p>
 					
-						<h6 class="title-attr">
-							Quantité en stock
-						</h6>
-						<p th:text="${product.productUnit}" class="card-text"></p>
-					</div>
-						<h6 class="title-attr">
-							Quantité
-						</h6>
-						<div>
-							<div class="btn-minus">
-								<span class="glyphicon glyphicon-minus"></span>
-							</div>
-							<input value="1" />
-							<div class="btn-plus">
-								<span class="glyphicon glyphicon-plus"></span>
-							</div>
-						</div>
-					</div>
-					<br/>
+					
+				<!-- Affichage Fiche Technique --> 
+					
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<h5 class="title-attr" style="color: #337ab7">Fiche Technique </h5>
+				<p th:text="${product.productDescription}" class="card-text"></p>
+				
+				<!-- Affichage Prix --> 
+				
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<h5 class="title-price" style="color: #337ab7">Prix </h5>
+				<h3 style="margin-top: 0px;" th:text="${product.productPrice}+' €'" class="card-text"></h3>
+				
+				<!-- Affichage Quantité en stock -->
+				
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<div class="section" style="padding-bottom: 20px;">
+				<h5 class="title-attr" style="color: #337ab7">Quantité en stock </h5>
+				<h5 th:text="${product.productUnit}" class="card-text"></h5>
+				
+				<!-- Input Quantité à commander -->
+					
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<h5 class="title-attr" style="color: #337ab7">Quantité </h5>
+				<div><input value="1"/></div><br/>
+
+				<!-- Button Ajouter au panier -->
 					<div class="section" style="padding-bottom: 20px;">
-						<a href="#" th:href="@{'~/profile/addToCart/' + ${product.productId}}" class="btn btn-info btn-md">Ajouter au panier</a>
-						<br/>
-						
-						<h6>
-							<a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor: pointer;"></span> Ajouter aux favoris</a>
-						</h6>
+						<a href="#" th:href="@{'~/profile/addToCart/' + ${product.productId}}"
+							class="btn btn-info btn-md">Ajouter au panier</a><br/><br/>
+							
+                        <!-- Button Ajouter aux favoris -->
+						<h5><a href="#"><span class="glyphicon glyphicon-heart-empty"
+								style="cursor: pointer;"></span> Ajouter aux favoris</a></h6>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<br/><br/>
+	<footer th:insert="fragments.html :: foot"></footer>
 </body>
 </html>

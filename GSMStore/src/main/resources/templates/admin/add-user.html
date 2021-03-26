@@ -5,6 +5,16 @@
 <body>
 <header th:insert="fragments.html :: nav"></header>
 	<div class="container">
+		<div class="list-group list-group-horizontal-mds my-5">
+				<a class="list-group-item list-group-item-action" 
+					href="#" th:href="@{/manager/category-form}">Manage Category</a>
+				<a class="list-group-item list-group-item-action" 
+					href="#" th:href="@{/manager/product-form}">Manage Product</a>
+				<a class="list-group-item list-group-item-action" 
+					href="#" th:href="@{/admin/add-user}">Add Admin/Manager</a>
+				<a class="list-group-item list-group-item-action" 
+					href="#" th:href="@{/admin/user-list}">User/Manager/Admin List</a>
+			</div>
 		<div
 			style="width: 600px; margin-left: auto; margin-right: auto; margin-top: 24px; padding: 24px;">
 			<div class="card">
@@ -46,7 +56,7 @@
 							</div>
 
 							<div class="form-actions" style="margin-top: 12px;">
-								<button type="submit" class="btn btn-success">Sign Up</button>
+								<button type="submit" class="btn btn-info">Sign Up</button>
 							</div>
 						</fieldset>
 					</form>
@@ -54,5 +64,7 @@
 			</div>
 		</div>
 	</div>
+		<br/><br/>
+	<footer th:insert="fragments.html :: foot"></footer>
 </body>
 </html>
