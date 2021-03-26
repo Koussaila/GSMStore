@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="Utf-8">
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:insert="fragments.html :: headerfiles">
@@ -6,12 +7,11 @@
 <body>
 	<header th:insert="fragments.html :: nav"></header>
 	<div class="container">
-	
-				<div class="list-group list-group-horizontal-md my-5">
+		<div class="list-group list-group-horizontal-md my-5">
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/category-form}">Gérer la catégorie</a>
+					href="#" th:href="@{/manager/category-form}">Gestion des catÃ©gories</a>
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/product-form}">Gestion du produit</a>
+					href="#" th:href="@{/manager/product-form}">Gestion des produits</a>
 				<a class="list-group-item list-group-item-action" 
 					href="#" th:href="@{/admin/add-user}">Ajouter un administrateur/gestionnaire</a>
 				<a class="list-group-item list-group-item-action" 
@@ -23,7 +23,7 @@
 				<tr>
 					<th scope="col">Id</th>
 					<th scope="col">Nom</th>
-					<th scope="col">Prénom</th>
+					<th scope="col">PrÃ©nom</th>
 					<th scope="col">Email</th>
 					<th scope="col">Role</th>
 					<th scope="col">Action</th>

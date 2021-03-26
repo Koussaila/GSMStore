@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<meta charset="Utf-8">
+	
 <head th:insert="fragments.html :: headerfiles">
 </head>
 <body>
 	<header th:insert="fragments.html :: nav"></header>
 	<div class="container">
-	
-	
-		<div class="list-group list-group-horizontal-md my-5">
+	<div class="list-group list-group-horizontal-md my-5">
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/category-form}">Gérer la catégorie</a>
+					href="#" th:href="@{/manager/category-form}">Gestion des catÃ©gories</a>
 				<a class="list-group-item list-group-item-action" 
-					href="#" th:href="@{/manager/product-form}">Gestion du produit</a>
+					href="#" th:href="@{/manager/product-form}">Gestion des produits</a>
 				<a class="list-group-item list-group-item-action" 
 					href="#" th:href="@{/admin/add-user}">Ajouter un administrateur/gestionnaire</a>
 				<a class="list-group-item list-group-item-action" 
@@ -23,7 +23,7 @@
 			<thead>
 				<tr>
 					<th scope="col">Id</th>
-					<th scope="col">Catégorie</th>
+					<th scope="col">CatÃ©gorie</th>
 					<th scope="col">Action</th>
 				</tr>
 			</thead>
@@ -50,9 +50,9 @@
 					<form th:action="@{/manager/add-category}" method="post">
 						<fieldset>
 							<div class="form-group">
-								<label for="categoryName">Catégorie</label> <input
+								<label for="categoryName">CatÃ©gorie</label> <input
 									type="text" class="form-control" id="categoryName"
-									name="categoryName" placeholder="Category Name">
+									name="categoryName" placeholder="Nom catÃ©gorie">
 							</div>
 
 							<div class="form-actions" style="margin-top: 12px;">

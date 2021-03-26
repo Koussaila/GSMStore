@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<meta charset="Utf-8">
   <head th:insert="fragments.html :: headerfiles">
 </head>
 <body>
@@ -14,7 +15,7 @@
 						<fieldset>
 							<div class="form-group">
 								<input type="hidden" th:value="${Category.categoryId}" name="categoryId">
-								<label for="categoryName">Catégorie</label> <input
+								<label for="categoryName">CatÃ©gorie</label> <input
 									type="text" class="form-control" id="categoryName"
 									name="categoryName" th:value="${Category.categoryName}">
 							</div>

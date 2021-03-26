@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<meta charset="Utf-8">
 <head th:insert="fragments.html :: headerfiles">
 </head>
 <body>
@@ -16,7 +17,7 @@
 							<input type="hidden" name="productId" th:value="${Product.productId}">
 							<div class="form-group">
 								<select class="custom-select" name="category">
-									<option selected>Catégorie</option>
+									<option selected>CatÃ©gorie</option>
 									<option th:each="category : ${categoryList}"
 										th:value="${category.categoryId}"
 										th:text="${category.categoryName}"></option>
@@ -30,15 +31,10 @@
 							</div>
 
 							<div class="form-group">
-
-								<label for="productDescription"> Description du produit </label> 
+								<label for="productDescription">Description du produit </label> 
 								<textarea
 									 class="form-control" id="productDescription"
-									name="productDescription" th:value="${Product.productDescription}" placeholder="Product Description"></textarea>
-
-								<label for="productDescription">Description du produit </label> <textarea
-									 class="form-control" id="productDescription"
-									name="productDescription" th:value="${Product.productDescription}"></textarea>
+									name="productDescription" th:value="${Product.productDescription}" placeholder="Description"></textarea>
 
 							</div>
 
@@ -49,7 +45,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="productUnit">Unité</label> <input
+								<label for="productUnit">UnitÃ© en stock</label> <input
 									type="number" class="form-control" id="productUnit"
 									name="productUnit" th:value="${Product.productUnit}">
 							</div>
@@ -59,7 +55,7 @@
 									class="form-control" id="file" name="file">
 							</div>
 							<div class="form-actions" style="margin-top: 12px;">
-								<button type="submit" class="btn btn-info">Ajouter</button>
+								<button type="submit" class="btn btn-info">Modifier</button>
 							</div>
 						</fieldset>
 					</form>
