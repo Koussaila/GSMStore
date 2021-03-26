@@ -24,16 +24,24 @@
 
                 <!-- Affichage Categorie --> 
                 
+<<<<<<< HEAD
 				<h5 style="color: #337ab7">Categorie 
 				<a class="list-group-item mr-2" th:each="category : ${productList}"
 					th:text="${category.categoryName}" href="#"
 					th:href="@{'/getProducts/' + ${category.categoryId}}"></a></h5>
 					<p>Smartphone</p>
+=======
+				<h5 style="color: #337ab7">Categorie :
+				<a class="list-group-item mr-2" th:each="category : ${productList}"
+					th:text="${category.categoryName}" href="#"
+					th:href="@{'/getProducts/' + ${category.categoryId}}"></a></h5>
+>>>>>>> refs/remotes/origin/master
 					
 					
 				<!-- Affichage Fiche Technique --> 
 					
 				<div style="width: 100%; border-top: 1px solid silver"></div>
+<<<<<<< HEAD
 				<h5 class="title-attr" style="color: #337ab7">Fiche Technique </h5>
 				<p th:text="${product.productDescription}" class="card-text"></p>
 				
@@ -54,22 +62,126 @@
 					
 				<div style="width: 100%; border-top: 1px solid silver"></div>
 				<h5 class="title-attr" style="color: #337ab7">Quantité </h5>
+=======
+				<h6 class="title-attr" style="color: #337ab7">Fiche Technique :</h6>
+				<p th:text="${product.productDescription}" class="card-text"></p>
+				
+				<!-- Affichage Prix --> 
+				
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<h6 class="title-price" style="color: #337ab7">Prix :</h6>
+				<h3 style="margin-top: 0px;" th:text="${product.productPrice}+' €'" class="card-text"></h3>
+				
+				<!-- Affichage Quantité en stock -->
+				
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<div class="section" style="padding-bottom: 20px;">
+				<h6 class="title-attr" style="color: #337ab7">Quantité en stock :</h6>
+				<h6 th:text="${product.productUnit}" class="card-text"></h6>
+				
+				<!-- Input Quantité à commander -->
+					
+				<div style="width: 100%; border-top: 1px solid silver"></div>
+				<h6 class="title-attr" style="color: #337ab7">Quantité :</h6>
+>>>>>>> refs/remotes/origin/master
 				<div><input value="1"/></div><br/>
 
 				<!-- Button Ajouter au panier -->
 					<div class="section" style="padding-bottom: 20px;">
 						<a href="#" th:href="@{'~/profile/addToCart/' + ${product.productId}}"
+<<<<<<< HEAD
 							class="btn btn-info btn-md">Ajouter au panier</a><br/><br/>
 							
                         <!-- Button Ajouter aux favoris -->
 						<h5><a href="#"><span class="glyphicon glyphicon-heart-empty"
+=======
+							class="btn btn-info btn-md">Ajouter au panier</a><br/>
+							
+                        <!-- Button Ajouter aux favoris -->
+						<h6><a href="#"><span class="glyphicon glyphicon-heart-empty"
+>>>>>>> refs/remotes/origin/master
 								style="cursor: pointer;"></span> Ajouter aux favoris</a></h6>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<br/><br/>
 	<footer th:insert="fragments.html :: foot"></footer>
+=======
+	
+	<!-- <div class="container">
+	<div class="card">
+		<div class="card-body" style=" position: absolute; background-color: #A7ADAE; margin-right: auto; margin-left: 300px; margin-top: 90px;">
+			<h4 class="card-title mb-4">Information de paiement</h4>
+			<form role="form">
+				<div class="form-group">
+					<label for="username">Nom sur la carte</label> <input type="text"
+						class="form-control" name="username" placeholder="Ex. John Smith"
+						required="">
+				</div>
+				<div class="form-group">
+					<label for="cardNumber">Numéro de carte</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="cardNumber"
+							placeholder="">
+						<div class="input-group-append">
+							<span class="input-group-text"> <i class="fab fa-cc-visa"></i>
+								&nbsp; <i class="fab fa-cc-amex"></i> &nbsp; <i
+								class="fab fa-cc-mastercard"></i>
+							</span>
+						</div>
+					</div>					
+				</div>				
+				<div class="row">
+					<div class="col-md flex-grow-0">
+						<div class="form-group">
+							<label><span class="hidden-xs">Expiration</span> </label>
+							<div class="form-inline" style="min-width: 220px">
+								<select class="form-control" style="width: 100px">
+									<option>MM</option>
+									<option>01 - Janvier</option>
+									<option>02 - Février</option>
+									<option>03 - Mars</option>
+									<option>03 - Avril</option>
+									<option>03 - Mai</option>
+									<option>03 - Juin</option>
+									<option>03 - Juillet</option>
+									<option>03 - Aout</option>
+									<option>03 - Septembre</option>
+									<option>03 - Octobre</option>
+									<option>03 - Novembre</option>
+									<option>03 - Décembre</option>
+								</select> <span style="width: 20px; text-align: center"> / </span> <select
+									class="form-control" style="width: 100px">
+									<option>YY</option>
+									<option>2021</option>
+									<option>2022</option>
+									<option>2023</option>
+									<option>2024</option>								
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label data-toggle="tooltip" title=""
+								data-original-title="Code à 3 chiffres au dos de la carte">CVV
+								<i class="fa fa-question-circle"></i>
+							</label> <input class="form-control" required="" type="text">
+						</div>
+						
+					</div>
+				</div>
+				
+				<button class="subscribe btn btn-primary btn-block" type="button">
+					Confirmer</button>
+			</form>
+		</div>
+	</div>
+</div> -->
+
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>
