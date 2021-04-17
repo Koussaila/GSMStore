@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="Utf-8">
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:insert="fragments.html :: headerfiles">
@@ -17,12 +18,12 @@
 
 		<div class="row">
 			<div class="col-sm-4" th:each="product : ${productList}">
-				<div class="card mt-4">
+				<div class="card mt-4" style="min-height:50px;">
 				<img th:src="${product.image}" class="card-img-top" alt="Product Image">
 					<div class="card-body">
-						<h5 th:text="${product.productName}" class="card-title"></h5>
-						<p th:text="${product.productDescription}" class="card-text"></p>
-						<p th:text="'$ '+${product.productPrice}" class="card-text"></p>
+						<h5 th:text="${product.productName}" class="card-title" style="min-height:175px;"></h5>
+						<!-- <p th:text="${product.productDescription}" class="card-text"></p> -->
+						<strong><p th:text="${product.productPrice} +' ' +€" class="card-text"></p></strong><br/>
 						<a href="#" th:href="@{'~/ViewDetails/' + ${product.productId}}" class="btn btn-info btn-md">Voir plus</a>
 					</div>
 				</div>
